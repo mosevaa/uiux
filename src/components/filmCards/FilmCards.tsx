@@ -4,7 +4,6 @@ import FilmCard from '@/components/filmCards/card/card';
 import { useEffect, useState } from 'react';
 import { getFilmsList } from '@/lib/api';
 import { IFilmList } from '@/lib/types';
-import { Link } from '@chakra-ui/next-js';
 
 export const FilmList = () => {
   const [films, setFilms] = useState<IFilmList>({
