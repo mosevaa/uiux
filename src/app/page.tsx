@@ -1,5 +1,5 @@
-import { FilmCards } from "@/components/filmCards/FilmCards";
+import { FilmList } from '@/components/filmCards/FilmCards';
 
 export default function Home() {
-    return FilmCards();
-};
+  return <FilmList />;
+}
