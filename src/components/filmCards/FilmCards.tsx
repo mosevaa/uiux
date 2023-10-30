@@ -1,6 +1,6 @@
 'use client';
 import { Flex, Text } from '@chakra-ui/react';
-import FilmCard from '@/components/filmCards/card/card';
+import FilmMiniCard from '@/components/filmCards/card/card';
 import { useEffect, useState } from 'react';
 import { getFilmsList } from '@/lib/api';
 import { IFilmList } from '@/lib/types';
@@ -35,7 +35,7 @@ export const FilmList = () => {
         {films &&
           films.movies.map((film) => (
             <Flex key={film.id}>
-              <FilmCard {...film} />
+              <FilmMiniCard {...film} />
             </Flex>
           ))}
       </Flex>

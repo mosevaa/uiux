@@ -7,7 +7,9 @@ export async function getFilmsList(page: string, pageSize: string) {
   );
 }
 
-//
-// export function getFilmInfo(id: string) {
-//     return axios.get<IFilm>(`movie_details.json?movie_id=${id}`)
-// }
+
+export async function getFilmInfo(id: string) {
+    return await axios.get<{ data: {movie: IFilm} }>(
+      `movie_details.json?movie_id=${id}`
+    )
+}

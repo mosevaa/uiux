@@ -2,11 +2,11 @@ import { Providers } from './providers';
 import React from 'react';
 import { Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-import down_line from '../public/1.svg';
-import down_line2 from '../public/2.svg';
-import top_line from '../public/3.svg';
-import top_line2 from '../public/4.svg';
-import logo from '../public/PICTU.svg';
+import down_line from '../../public/1.svg';
+import down_line2 from '../../public/2.svg';
+import top_line from '../../public/3.svg';
+import top_line2 from '../../public/4.svg';
+import logo from '../../public/PICTU.svg';
 
 export default function RootLayout({
   children,
@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body>
+      <body style={{backgroundColor: '#1A202C'}}>
         <Providers>
           <Flex position='relative' height='100vh' width='100wh' bg='gray.800'>
             <Flex position='absolute'>

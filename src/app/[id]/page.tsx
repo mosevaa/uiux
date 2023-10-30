@@ -1,5 +1,11 @@
-import { Flex } from '@chakra-ui/react';
+import FilmPage from '@/components/filmPage/FilmPage'
 
-export default function Film() {
-  return <Flex></Flex>;
+interface Props {
+  params: {
+    id: string
+  }
+}
+
+export default function Film({ params: { id } }: Props) {
+  return <FilmPage id={id}></FilmPage>
 }

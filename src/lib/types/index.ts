@@ -38,7 +38,7 @@ export interface IFilm {
   title: string;
   title_english: string;
   title_long: string;
-  torrents: ITorrent;
+  torrents: ITorrent[];
   url: string;
   year: number;
   yt_trailer_code: string;
@@ -49,4 +49,14 @@ export interface IFilmList {
   limit: number;
   page_number: number;
   movies: IFilm[];
+}
+
+interface IDataFilm {
+  movie: IFilm
+}
+
+export interface IResponse {
+  status: string
+  status_message: string
+  data: IDataFilm | IFilmList
 }

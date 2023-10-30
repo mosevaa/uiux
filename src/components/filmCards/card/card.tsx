@@ -4,16 +4,17 @@ import { Flex } from '@chakra-ui/react';
 import { Image, Link } from '@chakra-ui/next-js';
 import { IFilm } from '@/lib/types';
 
-const FilmCard = ({ id, medium_cover_image }: IFilm) => {
+const FilmMiniCard = ({ id, medium_cover_image }: IFilm) => {
   return (
     <Link href={`/${id}`}>
       <Card
         width='211px'
-        height='288px'
+        height='324px'
         backgroundImage={medium_cover_image}
+        backgroundSize='211px 324px'
       ></Card>
     </Link>
   );
 };
 
-export default FilmCard;
+export default FilmMiniCard;
