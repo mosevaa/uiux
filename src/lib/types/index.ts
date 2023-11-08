@@ -15,23 +15,31 @@ interface ITorrent {
   video_codec: string;
 }
 
-export interface IFilm {
+interface FilmStyles {
   background_image: string;
   background_image_original: string;
+  large_cover_image: string;
+  medium_cover_image: string;
+  small_cover_image: string;
+}
+
+interface FilmMeta {
+  url: string;
+  language: string;
+  imdb_code: string;
   date_uploaded: string;
   date_uploaded_unix: number;
+
+}
+
+export interface IFilm extends FilmStyles, FilmMeta {
   description_full: string;
   genres: string[];
   id: number;
-  imdb_code: string;
-  language: string;
-  large_cover_image: string;
-  medium_cover_image: string;
   mpa_rating: string;
   rating: number;
   runtime: number;
   slug: string;
-  small_cover_image: string;
   state: string;
   summary: string;
   synopsis: string;
@@ -39,7 +47,6 @@ export interface IFilm {
   title_english: string;
   title_long: string;
   torrents: ITorrent[];
-  url: string;
   year: number;
   yt_trailer_code: string;
 }

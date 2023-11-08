@@ -1,16 +1,18 @@
 'use client'
-import { Flex, Text } from '@chakra-ui/react'
 import { StarIcon, ArrowBackIcon } from '@chakra-ui/icons'
-import { IFilm } from '@/lib/types'
-import Genre from '@/components/filmPage/panel/GenreRectangle'
-import FilmCard from '@/components/filmCards/card/card'
+import { Flex, Text } from '@chakra-ui/react'
 import { Link } from '@chakra-ui/next-js'
+
+import { IFilm } from '@/lib/types'
+
+import Genre from '@/components/filmPage/panel/GenreRectangle'
+
 
 const Panel = ({ title, year, rating, genres }: IFilm) => {
   return (
     <Flex direction='row' wrap='wrap' gap='10px'>
       <Flex height='100%' mt='25px'>
-        <Link href={'/'}>
+        <Link href='/'>
           <ArrowBackIcon color='gray.100' fontSize='25px'/>
         </Link>
       </Flex>
@@ -33,8 +35,8 @@ const Panel = ({ title, year, rating, genres }: IFilm) => {
         </Flex>
       </Flex>
       <Flex wrap='wrap' mt='25px' gap='13px'>
-        {genres.map((genre: string, index) => (
-          <Genre genre={genre} key={index} />
+        {genres.map((genre, index) => (
+          <Genre genre={genre} key={`${index}-${genre}`} />
         ))}
       </Flex>
     </Flex>

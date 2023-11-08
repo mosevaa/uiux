@@ -1,3 +1,4 @@
+'use client'
 import { Button, Flex } from '@chakra-ui/react'
 import { Link } from '@chakra-ui/next-js'
 import { IFilm } from '@/lib/types'
